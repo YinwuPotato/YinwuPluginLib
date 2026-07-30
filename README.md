@@ -1,26 +1,89 @@
-# YinwuPluginLib
+# YinwuPluginLib — Yinwu插件库
+# YinwuPluginLib — Shared Library
 
-Version: **1.0.1**
+**最新版本：v1.0.1** | [下载 Release](https://github.com/qumingjam/YinwuPluginLib/releases/tag/v1.0.1)
 
-Yinwu 插件集共享库，提供所有子模块的基础设施。
+Shared library providing base classes, scheduling, API interfaces, and utilities for all Yinwu plugins.
 
-## 功能
+Yinwu 插件集共享库，提供所有子模块的基础设施：基类、调度器、API接口、工具集合。
 
-- **YinwuPlugin** — 模板方法基类，封装 Folia 检测、配置加载、生命周期
-- **SchedulerUtil** — Folia 调度器封装（Global/Region/Entity/Async Scheduler）
-- **API 接口** — EnchantAPI / ForgeAPI / RaidAPI，通过 Bukkit ServicesManager 跨模块调用
-- **AbstractGUI** — GUI 框架模板，自动管理打开玩家、点击转发
-- **ItemBuilder** — 流式 ItemStack 构建器
-- **I18n** — 多语言支持（lang/*.yml）
-- **BaseConfigManager** — 线程安全配置管理器（ConcurrentHashMap 缓存）
-- **NamespacedKeyCache** — 热路径 NamespacedKey 缓存
-- **ThreadSafe** — 线程安全集合工厂
+> ⚡ 完全兼容 Folia 区域线程调度，零 NMS。
 
-## 下载
+---
 
-[YinwuPluginLib-1.0.1.jar](https://github.com/qumingjam/YinwuPluginLib/releases/download/v1.0.1/YinwuPluginLib-1.0.1.jar)
+## Features | 功能
 
-## 技术栈
+| 模块 | 说明 |
+|------|------|
+| 🏗️ **YinwuPlugin** | 模板方法基类，封装 Folia 检测、配置加载、生命周期 |
+| ⏰ **SchedulerUtil** | Folia 调度器封装（Global/Region/Entity/Async） |
+| 🔌 **API 接口** | EnchantAPI / ForgeAPI / RaidAPI，通过 ServicesManager 跨模块调用 |
+| 🖥️ **AbstractGUI** | GUI 框架模板，自动玩家跟踪、点击转发 |
+| 🛠️ **ItemBuilder** | 流式 ItemStack 构建器 |
+| 🌐 **I18n** | 多语言支持（lang/*.yml） |
+| ⚙️ **BaseConfigManager** | 线程安全配置管理器（ConcurrentHashMap 缓存） |
+| 🏷️ **NamespacedKeyCache** | 热路径 NamespacedKey 缓存 |
+| 🧵 **ThreadSafe** | 线程安全集合工厂 |
 
-Java 21, Paper API 1.21+, Folia 兼容
-包名：net.yinwu.lib
+---
+
+## Architecture | 架构
+
+```
+net.yinwu.lib
+├── api/              # 跨模块 API 接口
+│   ├── EnchantAPI    # 附魔系统接口
+│   ├── ForgeAPI      # 锻造系统接口
+│   └── RaidAPI       # 袭击系统接口
+├── config/           # 配置管理器
+│   ├── BaseConfigManager
+│   └── ConfigHolder
+├── gui/              # GUI 框架
+│   └── AbstractGUI
+├── item/             # 物品工具
+│   ├── ItemBuilder
+│   └── NamespacedKeyCache
+├── lang/             # 多语言
+│   └── I18n
+├── plugin/           # 插件基类
+│   ├── YinwuPlugin
+│   └── YinwuAPI
+├── scheduler/        # 调度封装
+│   └── SchedulerUtil
+└── thread/           # 线程安全工具
+    └── ThreadSafe
+```
+
+---
+
+## Build | 构建
+
+```bash
+git clone https://github.com/qumingjam/YinwuPluginLib.git
+cd YinwuPluginLib
+mvn clean package
+```
+
+产出：`target/YinwuPluginLib-1.0.1.jar`
+
+---
+
+## Dependencies | 依赖
+
+- **Paper API 1.21+**（provided）
+
+---
+
+## Design Principles | 设计原则
+
+- **Folia First** — 调度和线程安全从设计之初即考虑
+- **零 NMS** — 纯 Paper/Folia API
+- **Java 21** — records、switch expressions、pattern matching
+
+---
+
+## Links | 链接
+
+- 仓库：[github.com/qumingjam/YinwuPluginLib](https://github.com/qumingjam/YinwuPluginLib)
+- 关联模块：YinwuForge | YinwuRaid | YinwuEnchant
+- 作者：Qumingjam
