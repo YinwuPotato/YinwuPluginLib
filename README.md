@@ -1,6 +1,6 @@
 # YinwuPluginLib
 
-阴悟插件集共享库，提供所有子模块的基础设施。
+YinwuPlugins shared library. Provides base classes, scheduling, API interfaces, and utilities.
 
 ## 功能
 
