@@ -1,6 +1,6 @@
 # YinwuPluginLib
 
-Version: 1.0.1
+Version: **1.0.1**
 
 Yinwu 插件集共享库，提供所有子模块的基础设施。
 
@@ -16,7 +16,11 @@ Yinwu 插件集共享库，提供所有子模块的基础设施。
 - **NamespacedKeyCache** — 热路径 NamespacedKey 缓存
 - **ThreadSafe** — 线程安全集合工厂
 
+## 下载
+
+[YinwuPluginLib-1.0.1.jar](https://github.com/qumingjam/YinwuPluginLib/releases/download/v1.0.1/YinwuPluginLib-1.0.1.jar)
+
 ## 技术栈
 
-- Java 21, Paper API 1.21+, Folia 兼容
-- 包名：net.yinwu.lib
+Java 21, Paper API 1.21+, Folia 兼容
+包名：net.yinwu.lib
