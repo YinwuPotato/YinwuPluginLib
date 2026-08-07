@@ -1,7 +1,7 @@
 # YinwuPluginLib — Yinwu插件库
 # YinwuPluginLib — Shared Library
 
-**最新版本：v1.0.1** | [下载 Release](https://github.com/qumingjam/YinwuPluginLib/releases/tag/v1.0.1)
+**最新版本：v1.0.2** | [下载 Release](https://github.com/qumingjam/YinwuPluginLib/releases/tag/v1.0.2)
 
 Shared library providing base classes, scheduling, API interfaces, and utilities for all Yinwu plugins.
 
@@ -17,7 +17,7 @@ Yinwu 插件集共享库，提供所有子模块的基础设施：基类、调�
 |------|------|
 | 🏗️ **YinwuPlugin** | 模板方法基类，封装 Folia 检测、配置加载、生命周期 |
 | ⏰ **SchedulerUtil** | Folia 调度器封装（Global/Region/Entity/Async） |
-| 🔌 **API 接口** | EnchantAPI / ForgeAPI / RaidAPI，通过 ServicesManager 跨模块调用 |
+| 🔌 **API 接口** | EnchantAPI / ForgeAPI / RaidAPI，通过 ServicesManager 调用；跨插件联动走 YinwuServiceBridge 反射桥 |
 | 🖥️ **AbstractGUI** | GUI 框架模板，自动玩家跟踪、点击转发 |
 | 🛠️ **ItemBuilder** | 流式 ItemStack 构建器 |
 | 🌐 **I18n** | 多语言支持（lang/*.yml） |
