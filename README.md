@@ -1,7 +1,7 @@
 # YinwuPluginLib — Yinwu插件库
 # YinwuPluginLib — Shared Library
 
-**最新版本：v1.0.2** | [下载 Release](https://github.com/qumingjam/YinwuPluginLib/releases/tag/v1.0.2)
+**最新版本：v1.0.3** | [下载 Release](https://github.com/qumingjam/YinwuPluginLib/releases/tag/v1.0.3)
 
 Shared library providing base classes, scheduling, API interfaces, and utilities for all Yinwu plugins.
 
@@ -64,7 +64,7 @@ cd YinwuPluginLib
 mvn clean package
 ```
 
-产出：`target/YinwuPluginLib-1.0.1.jar`
+产出：`target/YinwuPluginLib-1.0.3.jar`
 
 ---
 
