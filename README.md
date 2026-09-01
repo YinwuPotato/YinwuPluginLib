@@ -32,9 +32,10 @@ Yinwu 插件集共享库，提供所有子模块的基础设施：基类、调�
 ```
 net.yinwu.lib
 ├── api/              # 跨模块 API 接口
-│   ├── EnchantAPI    # 附魔系统接口
-│   ├── ForgeAPI      # 锻造系统接口
-│   └── RaidAPI       # 袭击系统接口
+│   ├── EnchantAPI            # 附魔系统接口
+│   ├── ForgeAPI              # 锻造系统接口
+│   ├── RaidAPI               # 袭击系统接口
+│   └── YinwuServiceBridge    # 跨插件服务反射桥
 ├── config/           # 配置管理器
 │   ├── BaseConfigManager
 │   └── ConfigHolder
@@ -70,7 +71,7 @@ mvn clean package
 
 ## Dependencies | 依赖
 
-- **Paper API 1.21+**（provided）
+- **Paper API 1.21.8**（provided）
 
 ---
 
