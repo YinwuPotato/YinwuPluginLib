@@ -1,7 +1,7 @@
 # YinwuPluginLib — Yinwu插件库
 # YinwuPluginLib — Shared Library
 
-**最新版本：v1.0.3** | [下载 Release](https://github.com/qumingjam/YinwuPluginLib/releases/tag/v1.0.3)
+**最新版本：v1.0.3** | [下载 Release](https://github.com/YinwuPotato/YinwuPluginLib/releases/tag/v1.0.3)
 
 Shared library providing base classes, scheduling, API interfaces, and utilities for all Yinwu plugins.
 
@@ -60,7 +60,7 @@ net.yinwu.lib
 ## Build | 构建
 
 ```bash
-git clone https://github.com/qumingjam/YinwuPluginLib.git
+git clone https://github.com/YinwuPotato/YinwuPluginLib.git
 cd YinwuPluginLib
 mvn clean package
 ```
@@ -85,6 +85,6 @@ mvn clean package
 
 ## Links | 链接
 
-- 仓库：[github.com/qumingjam/YinwuPluginLib](https://github.com/qumingjam/YinwuPluginLib)
+- 仓库：[github.com/YinwuPotato/YinwuPluginLib](https://github.com/YinwuPotato/YinwuPluginLib)
 - 关联模块：YinwuForge | YinwuRaid | YinwuEnchant
 - 作者：Qumingjam
