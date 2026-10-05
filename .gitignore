@@ -1,1 +1,6 @@
 target/
+
+### 构建/运行产物（统一补充）###
+dependency-reduced-pom.xml
+*.stackdump
+*.jar
