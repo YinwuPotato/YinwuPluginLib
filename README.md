@@ -62,10 +62,16 @@ net.yinwu.lib
 ```bash
 git clone https://github.com/YinwuPotato/YinwuPluginLib.git
 cd YinwuPluginLib
-mvn clean package
+mvn clean install
 ```
 
 产出：`target/YinwuPluginLib-1.0.3.jar`
+
+> 用 `install` 而不是 `package`：其它 Yinwu 插件都依赖本库，而它不在 Maven 中央仓库。
+> `install` 会把它装进本地仓库（`~/.m2`），下游插件才能 `mvn clean package`。
+> 父 POM（`net.yinwu:YinwuPlugins:1.0.1`）已随仓库提供在 `parent/pom.xml`，无需额外操作。
+
+**只构建本库、不安装**（不需要下游插件时）：`mvn clean package`
 
 ---
 
